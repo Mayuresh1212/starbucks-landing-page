@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        </div>
+        <header>
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="">
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2>It's not just Coffee <br> It's <span class="name">Starbucks</span></h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam, delectus accusamus laboriosam qui voluptatem quibusdam
+                    reprehenderit facere vitae molestiae mollitia consequuntur
+                    voluptate illum fugiat ipsa sint atque nulla. Recusandae, quis?
+                </p>
+                <a href="#" class="">View More</a>
+            </div>
+            <div class="img">
+                <img src="images/img1.png" class="star" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="images/thumb1.png" onclick="slider('images/img1.png'); changeColor('#017143'); changeName('#017143')" alt=""></li>
+            <li><img src="images/thumb2.png" onclick="slider('images/img2.png'); changeColor('#eb7495'); changeName('#eb7495')" alt=""></li>
+            <li><img src="images/thumb3.png" onclick="slider('images/img3.png'); changeColor('#d752b1'); changeName('#d752b1')" alt=""></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <script>
+        function slider(anything) {
+            document.querySelector('.star').src = anything;
+        }
+
+        function changeColor(color) {
+            const circle1 = document.querySelector('.circle1'),
+                  circle2 = document.querySelector('.circle2');
+
+            circle1.style.background = color;
+            circle2.style.background = color;
+        }
+
+        function changeName(color) {
+            const name = document.querySelector('.name');
+
+            name.style.color = color;
+        }
+    </script>
+</body>
+
+</html>
